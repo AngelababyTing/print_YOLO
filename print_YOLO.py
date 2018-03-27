@@ -10,7 +10,7 @@ filecount = 1
 os.mkdir("YOLO")
 
 for filename in os.listdir(input):
-	os.system("E:\darknet\\build\darknet\\x64\darknet.exe detect cfg\yolo.cfg weights\yolo.weights " + input + "\\" + filename)
+	os.system("E:\darknet\\build\darknet\\x64\darknet.exe detect cfg\yolov2.cfg weights\yolov2.weights " + input + "\\" + filename)
 	os.rename("predictions.jpg", str(filecount) + ".jpg")
 	shutil.move(str(filecount) + ".jpg","YOLO")
 	filecount += 1
